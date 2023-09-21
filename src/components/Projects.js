@@ -1,4 +1,5 @@
 import { Col, Container, Tab, Row, Nav } from "react-bootstrap";
+import React, { useState } from "react";
 import { ProjectCard } from './ProjectCard';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/proj-img1.png";
@@ -58,6 +59,18 @@ export const Projects = () => {
     },
   ];
 
+  // Define the number of projects to display per tab
+  const projectsPerPage = 6;
+
+  // Calculate the number of tabs needed based on the projects and projectsPerPage
+  const numTabs = Math.ceil(projects.length / projectsPerPage);
+
+  // Create an array of tab keys ("first", "second", "third", etc.)
+  const tabKeys = Array.from({ length: numTabs }, (_, index) => String(index + 1));
+
+  // Initialize the active tab
+  const [activeTab, setActiveTab] = useState(tabKeys[0]);
+
   return (
     <section className="projects" id="projects">
       <Container>
@@ -71,70 +84,30 @@ export const Projects = () => {
                 </div>
               )}
             </TrackVisibility>
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+            <Tab.Container id="projects-tabs" activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
               <Nav variant="pills" className="nav-pills mb-0 justify-content-center align-items-center" id="pills-tab">
-                <Nav.Item>
-                  <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                </Nav.Item>
+                {tabKeys.map((tabKey) => (
+                  <Nav.Item key={tabKey}>
+                    <Nav.Link eventKey={tabKey}>Tab {tabKey}</Nav.Link>
+                  </Nav.Item>
+                ))}
               </Nav>
               <Row style={{ height: "40px" }}></Row>
               <Tab.Content>
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {projects.map((project, index) => (
-                      <Col key={index} sm={6} md={4}>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        </a>
-                      </Col>
-                    ))}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="second">
-                  <Row>
-                    {projects.map((project, index) => (
-                      <Col key={index} sm={6} md={4}>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        </a>
-                      </Col>
-                    ))}
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-                  <Row>
-                    {projects.map((project, index) => (
-                      <Col key={index} sm={6} md={4}>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        </a>
-                      </Col>
-                    ))}
-                  </Row>
-                </Tab.Pane>
+                {tabKeys.map((tabKey) => (
+                  <Tab.Pane eventKey={tabKey} key={tabKey}>
+                    <Row>
+                      {projects.slice((tabKey - 1) * projectsPerPage, tabKey * projectsPerPage).map((project, index) => (
+                        <Col key={index} sm={6} md={4}>
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <ProjectCard key={index} {...project} />
+                          </a>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Tab.Pane>
+                ))}
               </Tab.Content>
-              <Tab.Pane eventKey="section">
-                <p>For my full repository of projects, follow me on Github, Linkedin.</p>
-              </Tab.Pane>
-              <Tab.Pane eventKey="first">
-                <p>All projects can be accessed through Github.</p>
-                <p>Requests and inquiries can be made through the contact details on this webpage.</p>
-              </Tab.Pane>
             </Tab.Container>
           </Col>
         </Row>
