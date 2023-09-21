@@ -7,6 +7,7 @@ import projImg3 from "../assets/img/proj-img3.png";
 import RISCVimg from "../assets/img/RISC-V-img.png";
 import SurfingImg from "../assets/img/Surfing-Proj-img.jpeg";
 import CoffePMimg from "../assets/img/Coffee-PM-img.png";
+import ReactImg from "../assets/img/React-proj-img.jpeg";
 
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -24,6 +25,12 @@ export const Projects = () => {
       description: "Simulation of ERTMS/ETCS Movement Authority with threads and processes.",
       imgUrl: projImg2,
       link: "https://github.com/AlbertoChar/Rail-Control-System",
+    },
+    {
+      title: "ReactJS Webpage",
+      description: "Portfolio webpage developed in ReactJS",
+      imgUrl: ReactImg,
+      link: "https://github.com/AlbertoChar/Portfolio-Webpage",
     },
     {
       title: "Pizza Management System",
