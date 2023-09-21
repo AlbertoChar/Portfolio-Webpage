@@ -9,6 +9,7 @@ import RISCVimg from "../assets/img/RISC-V-img.png";
 import SurfingImg from "../assets/img/Surfing-Proj-img.jpeg";
 import CoffePMimg from "../assets/img/Coffee-PM-img.png";
 import ReactImg from "../assets/img/React-proj-img.jpeg";
+import travelImg from "../assets/img/travel-img.png";
 
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -56,6 +57,12 @@ export const Projects = () => {
       description: "Simulates a coffee house management system applying OOP, SOLID, DP in Java",
       imgUrl: CoffePMimg,
       link: "https://github.com/AlbertoChar/CoffeeManagementSystem"
+    },
+    {
+      title: "Travel Agency- Concurrency",
+      description: "Concurrency and synchronization in Java with semaphores",
+      imgUrl: travelImg,
+      link: "https://github.com/AlbertoChar/Travel-Agency-Semaphores",
     },
   ];
 
