@@ -29,6 +29,14 @@ export const NavBar = () => {
     setActiveLink(value);
   }
 
+  const scrollToContactSection = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -51,7 +59,7 @@ export const NavBar = () => {
               <a href="https://instagram.com/alberto_charr?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="Instagram" /></a>
               <a href="https://github.com/AlbertoChar" target="_blank" rel="noopener noreferrer"><img width="80" height="80" src="https://img.icons8.com/ios-filled/80/000000/github.png" alt="github" /></a>
             </div>
-            <button className="vvd"><span>Let’s Connect</span></button>
+            <button className="vvd" onClick={scrollToContactSection}><span>Let’s Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>

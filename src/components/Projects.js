@@ -23,6 +23,12 @@ export const Projects = () => {
       link: "https://github.com/AlbertoChar/MS17-010-SMB",
     },
     {
+      title: "Surfing Conditions",
+      description: "Real-time ocean condition fetching directly to your calendar widget",
+      imgUrl: SurfingImg,
+      link: "https://github.com/AlbertoChar/Surfing-Conditions-Calendar",
+    },
+    {
       title: "Movement Authority ERTMS/ETCS",
       description: "Simulation of ERTMS/ETCS Movement Authority with threads and processes.",
       imgUrl: projImg2,
@@ -45,12 +51,6 @@ export const Projects = () => {
       description: "Encrypting and decrypting messages through different kinds of algorithms",
       imgUrl: RISCVimg,
       link: "https://github.com/AlbertoChar/RISC-V-Cipher",
-    },
-    {
-      title: "Surfing Conditions",
-      description: "Real-time ocean condition fetching directly to your calendar widget",
-      imgUrl: SurfingImg,
-      link: "https://github.com/AlbertoChar/Surfing-Conditions-Calendar",
     },
     {
       title: "Coffee house management system",

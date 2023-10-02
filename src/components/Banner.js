@@ -50,6 +50,14 @@ export const Banner = () => {
         }
     }
 
+    const scrollToContactSection = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      
+
     return (
         <section className="banner" id="home">
             <Container>
@@ -61,7 +69,7 @@ export const Banner = () => {
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{"Alberto Charabati \n "}</h1><p><span className="wrap">{text}</span></p>
                                     <p>Computer Science graduate from the University of Florence, Italy, with a focus on cybersecurity and penetration testing expertise. Passionate about delivering accurate and practical solutions by leveraging diverse knowledge. Demonstrated fast learning, high self-teaching capabilities, and creative problem-solving having studied in a foreign country and language. People person, teamplayer, and go-getter.</p>
-                                    <button onClick={() => console.log("connect")}> Let's connect <ArrowRightCircle size={25} /></button>
+                                    <button onClick={scrollToContactSection}>Let's connect <ArrowRightCircle size={25} /></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
