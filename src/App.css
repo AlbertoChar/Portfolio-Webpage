@@ -648,3 +648,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 80px;
   overflow: hidden;
 }
+
+/************ About Me Css ************/
+
+.rounded-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Adjust the border-radius as needed */
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

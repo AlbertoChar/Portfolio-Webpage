@@ -9,12 +9,11 @@ export const Contact = () => {
   
     return (
       <section className="contact" id="contact">
-        <Container>
           <Row className="align-items-center">
-            <Col md={6}>
+            <Col md={5}>
               <img src={contactImg} alt="Contact Me" />
             </Col>
-            <Col md={6}>
+            <Col xs={3} md={6} xl={6}>
               <h2>Get In Touch</h2>
               <Row>
                 <div style={contactInfoStyle}>
@@ -28,7 +27,6 @@ export const Contact = () => {
               </Row>
             </Col>
           </Row>
-        </Container>
       </section>
     );
   };

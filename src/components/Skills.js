@@ -27,7 +27,7 @@ export const Skills = () => {
     };
 
     return (
-        <section className="skill" id="skills">
+        <section className="skill" id="skills" style={{ paddingTop: '30px' }}>
             <Container>
                 <Row>
                     <Col>

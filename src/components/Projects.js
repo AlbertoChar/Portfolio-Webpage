@@ -86,7 +86,7 @@ export const Projects = () => {
   const [activeTab, setActiveTab] = useState(tabKeys[0]);
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects" style={{ paddingTop: '30px' }}>
       <Container>
         <Row>
           <Col>
