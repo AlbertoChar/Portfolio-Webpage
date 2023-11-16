@@ -7,9 +7,10 @@ import projImg2 from "../assets/img/proj-img2.png";
 import projImg3 from "../assets/img/proj-img3.png";
 import RISCVimg from "../assets/img/RISC-V-img.png";
 import SurfingImg from "../assets/img/Surfing-Proj-img.jpeg";
-import CoffePMimg from "../assets/img/Coffee-PM-img.png";
+import CoffePMImg from "../assets/img/Coffee-PM-img.png";
 import ReactImg from "../assets/img/React-proj-img.jpeg";
 import travelImg from "../assets/img/travel-img.png";
+import flaskApiImg from "../assets/img/Flask-API.png"
 
 import TrackVisibility from "react-on-screen";
 import "animate.css";
@@ -21,6 +22,12 @@ export const Projects = () => {
       description: "Vulnerability assessment and exploitation of MS17-010 SMB",
       imgUrl: projImg1,
       link: "https://github.com/AlbertoChar/MS17-010-SMB",
+    },
+    {
+      title: "Flask API",
+      description: "Flask-based backend API for managing blog posts (CRUD).",
+      imgUrl: flaskApiImg,
+      link: "https://github.com/AlbertoChar/Blog-API",
     },
     {
       title: "Surfing Conditions",
@@ -55,7 +62,7 @@ export const Projects = () => {
     {
       title: "Coffee house management system",
       description: "Simulates a coffee house management system applying OOP, SOLID, DP in Java",
-      imgUrl: CoffePMimg,
+      imgUrl: CoffePMImg,
       link: "https://github.com/AlbertoChar/CoffeeManagementSystem"
     },
     {
